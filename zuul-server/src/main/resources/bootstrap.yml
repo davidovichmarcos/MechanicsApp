@@ -16,6 +16,6 @@ management:
     enabled: false
 zuul:
   routes:
-    client-a:
+    mechanics-client:
       path: /client/**
-      serviceId: client-a
+      serviceId: mechanics-client
