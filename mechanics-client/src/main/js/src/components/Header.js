@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 import { Header, Navbar, Nav, Icon, FlexboxGrid } from "rsuite";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+import logo from "../static/img/logo.png";
+
+const HeaderCont = styled.div`
+  .rs-navbar,
+  .rs-navbar-inverse {
+    background-color: red;
+  }
+`;
 
 const navdata = [
   { name: "Home", link: "/home", icon: "home" },
@@ -38,27 +48,29 @@ export default class myHeader extends Component {
     });
 
     return (
-      <Header>
-        <Navbar appearance="inverse">
-          <FlexboxGrid justify="center">
-            <FlexboxGrid.Item colspan={20}>
-              <Navbar.Header>
-                <h2>MECHANICS APP</h2>
-              </Navbar.Header>
-              <Navbar.Body>
-                <Nav
-                  pullRight
-                  pills="true"
-                  activeKey={activeKey}
-                  onSelect={this.handleSelect}
-                >
-                  {fillMenu}
-                </Nav>
-              </Navbar.Body>
-            </FlexboxGrid.Item>
-          </FlexboxGrid>
-        </Navbar>
-      </Header>
+      <HeaderCont>
+        <Header className="fixedHeader">
+          <Navbar appearance="inverse">
+            <FlexboxGrid justify="center">
+              <FlexboxGrid.Item colspan={20}>
+                <Navbar.Header>
+                  <img src={logo} alt="MECHANIKSAPP" className="mainLogo" />
+                </Navbar.Header>
+                <Navbar.Body>
+                  <Nav
+                    pullRight
+                    pills="true"
+                    activeKey={activeKey}
+                    onSelect={this.handleSelect}
+                  >
+                    {fillMenu}
+                  </Nav>
+                </Navbar.Body>
+              </FlexboxGrid.Item>
+            </FlexboxGrid>
+          </Navbar>
+        </Header>
+      </HeaderCont>
     );
   }
 }

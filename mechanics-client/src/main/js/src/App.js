@@ -13,8 +13,8 @@ import Page404 from "./components/Pages/Page404";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import "./App.css";
 import "rsuite/dist/styles/rsuite.min.css";
+import "./App.css";
 //import "custom-theme.less";
 
 const Style = styled.div``;

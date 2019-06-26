@@ -12,3 +12,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.mainLogo {
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+.rs-navbar,
+.rs-navbar-inverse {
+  background-color: #072d91 !important;
+}
+
+.rs-nav-item > .rs-nav-item-content:hover {
+  background-color: #13163e !important;
+}
